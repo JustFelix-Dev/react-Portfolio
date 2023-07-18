@@ -1,8 +1,9 @@
 import { Outlet } from 'react-router-dom';
+import Nav from '../components/Nav';
 const Main = () => {
     return ( 
            <>
-              <h1>Welcome to my Portfolio!</h1>
+                <Nav/>
                <Outlet/>
            </>
      );
