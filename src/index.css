@@ -32,13 +32,13 @@ li a.active{
 }
 @keyframes glowing {
   0% {
-    box-shadow: 0 0 10px blue;
+    box-shadow: 0 0 5px blue;
   }
   50% {
     box-shadow: 0 0 30px blue;
   }
   100% {
-    box-shadow: 0 0 10px blue;
+    box-shadow: 0 0 5px blue;
   }
 }
 .home__link{
