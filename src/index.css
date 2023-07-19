@@ -66,7 +66,7 @@ li a.active{
 .hero{
   padding: 5rem 0;
   /* height: 500px; */
-  background-image:url('/public/polygon.svg');
+  background-image:url('/twilight.svg');
 }
 .hero__content{
   display: flex;
@@ -150,4 +150,64 @@ li a.active{
 /* button click effect*/
 .hero__content .first .Btn:active {
   transform: translate(2px ,2px);
+}
+
+/* MY TECH */
+.my__tech{
+  background-image: url('/particles.svg');
+}
+/* INTRODUCTION */
+.introduction{
+  padding: 1rem 4rem;
+}
+
+.introduction p {
+  width: 75ch;
+}
+
+.intro__cards{
+  display: flex;
+  gap: 2rem;
+  margin-block: 1.5rem;
+}
+.intro__cards div{
+    display: flex;
+    flex-direction: column;
+   justify-content: start;
+   padding-block: 3rem;
+   align-items: center;
+    background-color: whitesmoke;
+    border: 1px solid brown;
+    border-radius: 20px;
+    height: 16rem;
+    width: 12rem;
+}
+.intro__cards div > span{
+  font-size:1.1rem;
+  font-weight: 600;
+  width: 10ch;
+  line-height: 99%;
+  padding-block: 2rem;
+  text-align: center;
+}
+/* technology */
+.technology{
+  padding: 0 4rem;
+}
+.tech__stack {
+  display: flex;
+  gap: 3rem;
+}
+.tech__stack > div {
+   margin-block: 1.5rem;
+   border: 1px solid brown;
+}
+.tech__stack .frontEnd{
+  position: relative;
+  padding-top: 3rem;
+}
+.tech__stack .frontEnd > img{
+  position: absolute;
+  top: -25%;
+  left: 45%;
 }
