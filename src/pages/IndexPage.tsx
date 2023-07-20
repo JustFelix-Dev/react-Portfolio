@@ -1,3 +1,7 @@
+import { Tilt } from "react-tilt";
+import Contact from "../components/Contact";
+import { Link } from "react-scroll";
+
 const IndexPage = () => {
     return ( 
       <>
@@ -9,10 +13,12 @@ const IndexPage = () => {
                 </div>
                 <h2>Are you ready to build or solve your web application problems with a savvy FullStack Developer ?</h2>
                 <h1>Hi there,I'm Felix</h1>
-            <button className="Btn">
-            <div className="sign"><img style={{fontWeight:900}} src="/public/contact.svg" alt="contact-icon" height={20} width={20} /></div>
-            <div className="text">&nbsp;&nbsp;Contact&nbsp;Me</div>
-            </button>
+                <Link activeClass="active" to="contact" spy={true} smooth={true} offset={100} duration={2000}>
+                <button className="Btn">
+                <div className="sign"><img style={{fontWeight:900}} src="/public/contact.svg" alt="contact-icon" height={20} width={20} /></div>
+                <div className="text">&nbsp;&nbsp;Contact&nbsp;Me</div>
+                </button>
+                </Link>
             </div>
             <div className="second">
             <svg width={300} height={300} xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 66 66" viewBox="0 0 66 66" id="coding"><rect width="15.205" height="6.473" x="16.58" y="55.951" fill="#FAA919"></rect><rect width="45.577" height="33.431" x="1.32" y="22.52" fill="#E4E4E4"></rect><rect width="38.966" height="27.537" x="4.626" y="25.467" fill="#FFF"></rect><rect width="22.602" height="4.632" x="12.882" y="60.346" fill="#E4E4E4"></rect><path fill="#E4E4E4" d="M63.6996,64.8977H43.594c-0.5413,0-0.9802-0.4389-0.9802-0.9803V47.4497
@@ -80,25 +86,25 @@ c-0.18213-0.0371-0.32324,0.0781-0.41797,0.21379l-2.64013,3.78031c-0.0586,0.084-0
                   Let's build something extraordinary together and leave a lasting   impression on your users. Reach out to me and let's get started!
                   </p>
                   <div className="intro__cards">
-                    <div >
+                    <Tilt className='tilted' options={{ max: 45, scale: 1,speed:450 }}>
                         <img src="/frontendIcon.png" alt="frontEndIcon" width={60} height={60} />
                         <span>Front-End Developer</span>
-                    </div>
-                    <div >
+                    </Tilt>
+                    <Tilt className='tilted' options={{ max: 45, scale: 1,speed:450 }}>
                         <img src="/backendIcon.png" alt="backEndIcon" width={60} height={60} />
                         <span>Back-End Developer</span>
-                    </div>
-                    <div>
+                    </Tilt>
+                    <Tilt className='tilted' options={{ max: 45, scale: 1,speed:450 }}>
                         <img src="/technicalIcon.png" alt="technicalIcon" width={60} height={60} />
                         <span>Technical  Writer</span>
-                    </div>
+                    </Tilt>
                   </div>
              </div>
              <div className="technology">
                 <h2>MY TECHNOLOGY STACKS</h2>
                 <p>I demonstrate a high level of proficiency using these stacks:</p>
             <div className="tech__stack">
-                 <div className="frontEnd">
+                 <Tilt options={{ max: 25, scale: 1,speed:450 }} className="frontEnd">
                  <img src="/frontendIcon.png" alt="frontEndIcon" width={60} height={60} />
                   <div className="frontEndIcons">
                       <span><img src="/html.png" alt="" width={45} height={45} /></span>
@@ -112,16 +118,18 @@ c-0.18213-0.0371-0.32324,0.0781-0.41797,0.21379l-2.64013,3.78031c-0.0586,0.084-0
                       <span><img src="/react.png" alt="" width={45} height={45} /></span>
                       <span><img src="/redux.png" alt="" width={45} height={45} /></span>
                   </div>
-                 </div>
-                 <div className="backEnd">
+                    <p>Front-End Stacks</p>
+                 </Tilt>
+                 <Tilt options={{ max: 25, scale: 1,speed:450 }} className="backEnd">
                  <img src="/backendIcon.png" alt="backEndIcon" width={60} height={60} />
                  <div className="backEndIcons">
                  <span><img src="/nodejs.png" alt="" width={45} height={45} /></span>
                  <span><img src="/expressjs.png" alt="" width={45} height={45} /></span>
                  <span><img src="/mongoDB.png" alt="" width={45} height={45} /></span>
                  </div>
-                 </div>
-                 <div className="devOps">
+                 <p>Back-End Stacks</p>
+                 </Tilt>
+                 <Tilt options={{ max: 25, scale: 1,speed:450 }} className="devOps">
                  <img src="/devOps.png" alt="devOpsIcon" width={60} height={60} />
                  <div className="devOpsIcons">
                  <span><img src="/git.png" alt="" width={45} height={45} /></span>
@@ -129,10 +137,22 @@ c-0.18213-0.0371-0.32324,0.0781-0.41797,0.21379l-2.64013,3.78031c-0.0586,0.084-0
                  <span><img src="/vercel.png" alt="" width={45} height={45} /></span>
                  <span><img src="/netlify.png" alt="" width={45} height={45} /></span>
                  </div>
-                 </div>
+                 <p>DevOps</p>
+                 </Tilt>
             </div>
              </div>
              </div>
+             <div className="projects">
+                <h2>MY PROJECTS</h2>
+                <p>These projects showcases my skills and experience. Each project is briefly described with links to code repositories and live demos in it.It reflects my ability to build and solve software products/problems,work with different technologies,and manage projects efficiently.</p>
+                <div className="projectData">
+                </div>
+             </div>
+             <div className="contacts">
+                <Contact/>
+
+             </div>
+            
       </>
      );
 }

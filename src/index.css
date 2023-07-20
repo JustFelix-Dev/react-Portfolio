@@ -162,7 +162,7 @@ li a.active{
 }
 
 .introduction p {
-  width: 75ch;
+  max-width: 75ch;
 }
 
 .intro__cards{
@@ -170,17 +170,18 @@ li a.active{
   gap: 2rem;
   margin-block: 1.5rem;
 }
-.intro__cards div{
-    display: flex;
-    flex-direction: column;
+.intro__cards .tilted{
+   display: flex;
+   flex-direction: column;
    justify-content: start;
    padding-block: 3rem;
    align-items: center;
-    background-color: whitesmoke;
+   background-color: rgba(255, 255, 255, 0.6);
+   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid brown;
     border-radius: 20px;
     height: 16rem;
-    width: 12rem;
+    width: 14rem;
 }
 .intro__cards div > span{
   font-size:1.1rem;
@@ -196,18 +197,77 @@ li a.active{
 }
 .tech__stack {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   gap: 3rem;
+  /* border: 1px solid red; */
 }
 .tech__stack > div {
    margin-block: 1.5rem;
-   border: 1px solid brown;
+   border: 2px solid brown;
 }
-.tech__stack .frontEnd{
+.tech__stack :is(.frontEnd,.backEnd,.devOps){
+  flex: 0 0 25%;
+  min-width: 300px;
   position: relative;
   padding-top: 3rem;
+  background-color: rgba(255, 255, 255, 0.6);
+   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
 }
-.tech__stack .frontEnd > img{
+.tech__stack :is(.frontEnd,.backEnd,.devOps) > img{
   position: absolute;
-  top: -25%;
-  left: 45%;
+  background-color: white;
+  border: 2px dotted brown;
+  padding: .3rem;
+  border-radius: 50px;
+  top: -18%;
+  left: 42%;
 }
+.tech__stack :is(.frontEnd,.backEnd,.devOps) > p{
+  color: brown;
+  text-align: center;
+  font-weight: 700;
+}
+.tech__stack :is(.frontEnd,.backEnd,.devOps)
+ :is(.frontEndIcons,.backEndIcons,.devOpsIcons){
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   /* border: 1px solid red; */
+   height: 9rem;
+   gap: 1rem;
+ }
+ .tech__stack :is(.frontEnd,.backEnd,.devOps) :is(.backEndIcons,.devOpsIcons){
+  align-items: center;
+  justify-content: space-evenly;
+ }
+ .tech__stack :is(.frontEnd,.backEnd,.devOps)
+ :is(.frontEndIcons,.backEndIcons,.devOpsIcons) > span img{
+   border-radius: 20px;
+   /* overflow: hidden; */
+ }
+ /* PROJECTS */
+ .projects{
+  padding: 1rem 4rem;
+ }
+ .projects p {
+    max-width: 75ch;
+ }
+ /* CONTACTS */
+ .contacts{
+  background-image: url('/twilight.svg');
+  color: white;
+  padding: 1rem 4rem;
+ }
+ .contacts .container{
+  display: flex;
+ }
+ .contacts .myForm {
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+ }
