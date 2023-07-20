@@ -270,7 +270,7 @@ li a.active{
   flex: 0 0 50%;
   padding: 1rem 2rem;
   background-color: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.9);
   border-radius: 10px;
  }
  .myForm span {
@@ -290,8 +290,24 @@ li a.active{
      padding: .4rem 1rem;
      margin-block: 0.3rem;
      width: 80%;
+     resize: none;
  }
  .myForm form input::placeholder,textarea::placeholder{
     color: white;
     opacity: 0.6;
+ }
+ .myForm form button {
+  cursor: pointer;
+  padding: .2rem 2rem;
+  border-radius: 10px;
+  border: 0;
+  background-color: yellow;
+  margin-left: 1.1rem;
+ }
+
+ .container .contact__image{
+  flex: 0 0 40%;
+  display: flex;
+  align-self: center;
+  justify-content: end;
  }

@@ -47,7 +47,7 @@ const Contact = () => {
                  </form>
             </div>
               <div className="contact__image">
-              <svg  xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 36 36" id="message">
+              <svg  xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 36 36" id="message">
               <g transform="translate(0 -1016.362)">
             <rect width="36" height="36" y="1016.362" fill="#f8b84e" rx="6" ry="6"></rect>
             <path fillRule="evenodd" d="M17 1021.362 3 1030.7l14 9.336 14-9.336-14-9.338z" opacity=".15"></path>
