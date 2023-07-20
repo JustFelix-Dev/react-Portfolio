@@ -123,6 +123,7 @@ c-0.18213-0.0371-0.32324,0.0781-0.41797,0.21379l-2.64013,3.78031c-0.0586,0.084-0
                  <Tilt options={{ max: 25, scale: 1,speed:450 }} className="backEnd">
                  <img src="/backendIcon.png" alt="backEndIcon" width={60} height={60} />
                  <div className="backEndIcons">
+                 <span><img src="/firebase.webp" alt="" width={45} height={45} /></span>
                  <span><img src="/nodejs.png" alt="" width={45} height={45} /></span>
                  <span><img src="/expressjs.png" alt="" width={45} height={45} /></span>
                  <span><img src="/mongoDB.png" alt="" width={45} height={45} /></span>

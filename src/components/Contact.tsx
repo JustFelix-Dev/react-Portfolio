@@ -17,8 +17,8 @@ const Contact = () => {
           <>
             <div id='contact' className="container">
             <div className="myForm">
-                <p>Get In Touch</p>
-                 <h3>Contact.</h3>
+                <span>Get In Touch</span>
+                 <h1>Contact.</h1>
                  <form 
                   ref={formRef}
                    onSubmit={handleSubmit}
@@ -34,13 +34,13 @@ const Contact = () => {
                       <input type="email" name="email" 
                       value={form.email} onChange={handleChange}
                       placeholder="e.g,someone@gmail.com"
-                      />
+                      /> <br />
                     <label htmlFor="message">Your Message:
                     </label> <br />
-                      <textarea name="message" 
+                      <textarea name="message" rows={6} 
                       value={form.message} onChange={handleChange}
                       placeholder="Kindly,leave me a message....."
-                      ></textarea>
+                      ></textarea> <br />
                     <button type="submit">
                         { loading ? 'Sending...' : 'Send'}
                     </button>
