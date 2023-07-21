@@ -1,17 +1,23 @@
 import { Link } from "react-scroll";
+import Nav from "./Nav";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
     return ( 
          <>
            <div className="hero">
+            <Nav/>
         <div className="hero__content">
             <div className="first">
                 <div className="border">
-                    <div ></div>
+                    <div></div>
                 </div>
-                <h2>Are you ready to build or solve your web application problems with a savvy FullStack Developer ?</h2>
                 <h1>Hi there,I'm Felix</h1>
-                <Link activeClass="active" to="contact" spy={true} smooth={true} offset={100} duration={2000}>
+                <h2>
+                <TypeAnimation sequence={['Are you ready to build or solve your web application problems with a savvy FullStack Developer ? ',1000,'Welcome to my Portfolio Page!',2000]} wrapper="span" speed={50} repeat={Infinity}/>
+                </h2>
+                   
+                <Link className="buttons" activeClass="active" to="contact" spy={true} smooth={true} offset={100} duration={2000}>
                 <button className="Btn">
                 <div className="sign"><img style={{fontWeight:900}} src="/public/contact.svg" alt="contact-icon" height={20} width={20} /></div>
                 <div className="text">&nbsp;&nbsp;Contact&nbsp;Me</div>

@@ -5,40 +5,61 @@
   font-family: 'Mukta', sans-serif;
 }
 
+body{
+  background-image:url('/twilight.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment:fixed;
+  background-position: bottom;
+  /* animation: twilight 100000ms infinite alternate; */
+}
+
 /* NAV */
+
 nav{
   display: flex;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 20px;
   align-items: center;
   justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 1);
   padding: .8rem 2rem;
   box-shadow: 0 2px 40px -2px rgba(0,0,0,.2);
+  cursor: pointer;
 }
 
 a{
-  color: black;
+  color: white;
   text-decoration: none;
   padding: .1rem .7rem;
 }
 li a.active{
-  background-color: blue;
+  background-color: #562424;
   border-radius:10px;
   color: white;
 }
 .contact {
-  background-image: linear-gradient(to right, blue 10%, #061161  41%, red 100%);
+  background-image: linear-gradient(to right, brown 10%, #562424  41%, black 100%);
+  background-size: 400%;
   border-radius:10px;
   color: white;
-  animation: glowing 1300ms infinite;
+  animation: glowing 2500ms infinite;
+  cursor: pointer;
 }
 @keyframes glowing {
   0% {
-    box-shadow: 0 0 5px blue;
+    box-shadow: 0 0 20px #562424;
+    background-position: left;
   }
   50% {
-    box-shadow: 0 0 30px blue;
+    box-shadow: 0 0 40px #562424;
+    background-position: center;
   }
   100% {
-    box-shadow: 0 0 5px blue;
+    box-shadow: 0 0 20px #562424;
+    background-position: right;
   }
 }
 .home__link{
@@ -64,22 +85,35 @@ li a.active{
 
 /* Hero Page */
 .hero{
-  padding: 5rem 0;
-  /* height: 500px; */
-  background-image:url('/twilight.svg');
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding-bottom: 5rem;
 }
+
 .hero__content{
   display: flex;
-  /* border: 2px solid red; */
   justify-content: center;
   gap: 1rem;
 }
 .hero__content .first{
-  flex: 0 0 55%;
+  flex: 0 0 50%;
+  max-width: 60ch;
 }
+.hero__content .first .fullstack{
+  font-weight: bold ;
+  color: yellow;
+}
+.hero__content .first h2 {
+  margin-bottom: 4rem;
+}
+.hero__content .first h1{
+  color: gold;
+}
+
 .hero__content .second{
   display: flex;
-  flex: 0 0 35%;
+  flex: 0 0 30%;
   justify-content: end;
 }
 .hero .hero__content div{
@@ -152,12 +186,10 @@ li a.active{
   transform: translate(2px ,2px);
 }
 
-/* MY TECH */
-.my__tech{
-  background-image: url('/particles.svg');
-}
+
 /* INTRODUCTION */
 .introduction{
+  color: white;
   padding: 1rem 4rem;
 }
 
@@ -176,7 +208,7 @@ li a.active{
    justify-content: start;
    padding-block: 3rem;
    align-items: center;
-   background-color: rgba(255, 255, 255, 0.6);
+   background-color: rgba(255, 255, 255, 0.1);
    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid brown;
     border-radius: 20px;
@@ -194,6 +226,7 @@ li a.active{
 /* technology */
 .technology{
   padding: 0 4rem;
+  color: white;
 }
 .tech__stack {
   display: flex;
@@ -213,21 +246,19 @@ li a.active{
   min-width: 300px;
   position: relative;
   padding-top: 3rem;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.1);
    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
    border-radius: 10px;
 }
 .tech__stack :is(.frontEnd,.backEnd,.devOps) > img{
   position: absolute;
-  background-color: white;
-  border: 2px dotted brown;
-  padding: .3rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: .6rem;
   border-radius: 50px;
   top: -18%;
   left: 42%;
 }
 .tech__stack :is(.frontEnd,.backEnd,.devOps) > p{
-  color: brown;
   text-align: center;
   font-weight: 700;
 }
@@ -251,6 +282,7 @@ li a.active{
  }
  /* PROJECTS */
  .projects{
+  color: white;
   padding: 1rem 4rem;
  }
  .projects p {
@@ -258,7 +290,6 @@ li a.active{
  }
  /* CONTACTS */
  .contacts{
-  background-image: url('/twilight.svg');
   color: white;
   padding: 1rem 8rem;
  }
@@ -281,11 +312,15 @@ li a.active{
  .myForm form label {
     margin-left: 1.1rem;
  }
+
+ 
  .myForm form input,textarea{
     background-color: rgba(255, 255, 255, 0.12);
      border-radius: 20px;
      border: 1px solid gray;
      outline: 0;
+     color: white;
+     font-size: 1rem;
      caret-color: white;
      padding: .4rem 1rem;
      margin-block: 0.3rem;
@@ -295,6 +330,15 @@ li a.active{
  .myForm form input::placeholder,textarea::placeholder{
     color: white;
     opacity: 0.6;
+ }
+ .myForm form .form__response{
+  background-color: yellow;
+  color: black;
+  padding: .3rem .6rem;
+  border-radius: 20px;
+  width: 80%;
+  margin-block: .6rem;
+  opacity: 0.7;
  }
  .myForm form button {
   cursor: pointer;
@@ -311,3 +355,28 @@ li a.active{
   align-self: center;
   justify-content: end;
  }
+
+ /* Form Loader */
+ .loader-pulse {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #8f44fd;
+  animation: load-pulse 0.85s infinite linear;
+}
+
+@keyframes load-pulse {
+  0% {
+    transform: scale(0.15);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}

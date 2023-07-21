@@ -1,5 +1,6 @@
 import emailjs  from "@emailjs/browser";
 import { useRef, useState } from "react";
+import { Tilt } from "react-tilt";
 
 const Contact = () => {
     const formRef = useRef<HTMLFormElement>(null);
@@ -9,14 +10,51 @@ const Contact = () => {
           message: ''
     })
     const [ loading,setLoading ] = useState(false);
+    const [ response, setResponse] = useState('');
+    const [ display,setDisplay] = useState(false);
 
-    const handleChange =()=> {};
-    const handleSubmit =()=> {};
+    const handleChange =(e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)=>{
+        const { name, value } = e.target;
+        setForm({...form, [name]: value})
+    };
+    const handleSubmit =(e:React.FormEvent<HTMLFormElement>)=> {
+        e.preventDefault();
+        setResponse('');
+        setDisplay(false);
+        setLoading(true);
+        emailjs.send(
+            'portfolio',
+            'template_fqw9m2o',
+            {
+                from_name: form.name,
+                to_name: 'Felix',
+                from_email: form.email,
+                to_email: 'owolabifelix78@gmail.com',
+                message: form.message,
+            },
+            'k1GNETitHr4y-KBIK'
+            ).then(()=>{
+                setLoading(false)
+                setResponse('Thank You!. I would get back to you as soon as possible.')
+                setDisplay(true)
+                setForm({
+                    name: '',
+                    email: '', 
+                    message: ''
+                })
+            },(error)=>{
+                setLoading(false)
+                console.log(error)
+                setResponse('Oops!. Looks like something went wrong!')
+                setDisplay(true)
+            })
+    };
+
 
     return ( 
           <>
             <div id='contact' className="container">
-            <div className="myForm">
+            <Tilt className="myForm" options={{ max: 45, scale: 1,speed:450 }}>
                 <span>Get In Touch</span>
                  <h1>Contact.</h1>
                  <form 
@@ -26,26 +64,28 @@ const Contact = () => {
                     <label htmlFor="name">Your Name: </label> <br />
                       <input type="text" name="name" 
                       value={form.name} onChange={handleChange}
-                      placeholder="What is your Name ?"
+                      placeholder="What is your Name ?" required
                       /> <br />
                     <label htmlFor="email">Your Email:
                     </label><br />
 
                       <input type="email" name="email" 
                       value={form.email} onChange={handleChange}
-                      placeholder="e.g,someone@gmail.com"
+                      placeholder="e.g,someone@gmail.com" required
                       /> <br />
                     <label htmlFor="message">Your Message:
                     </label> <br />
                       <textarea name="message" rows={6} 
                       value={form.message} onChange={handleChange}
-                      placeholder="Kindly,leave me a message....."
+                      placeholder="Kindly leave me a message....." required
                       ></textarea> <br />
+                  { display && <h6 className="form__response">{response}</h6>}
                     <button type="submit">
-                        { loading ? 'Sending...' : 'Send'}
+                        { loading ? (  <div className="item"><div className="loader-pulse"></div>
+                                        </div>) : 'Send'}
                     </button>
                  </form>
-            </div>
+            </Tilt>
               <div className="contact__image">
               <svg  xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 36 36" id="message">
               <g transform="translate(0 -1016.362)">

@@ -12,7 +12,6 @@ const IndexPage = () => {
              <div className="contacts">
                 <Contact/>
              </div>
-            
       </>
      );
 }

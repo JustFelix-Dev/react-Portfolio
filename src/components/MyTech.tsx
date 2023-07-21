@@ -5,7 +5,7 @@ const MyTech = () => {
           <>
            <div className="my__tech">
              <div className="introduction">
-                <h2>INTRODUCTION</h2>
+                <h2>OVERVIEW.</h2>
                   <p> I help clients,firms or organizations build applications or solve their software engineering problems by deploying/combining the use of required technology stacks needed for such projects.
                   Let's build something extraordinary together and leave a lasting   impression on your users. Reach out to me and let's get started!
                   </p>
