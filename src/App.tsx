@@ -10,7 +10,7 @@ import IndexPage from "./pages/IndexPage";
 const router = createBrowserRouter(
                createRoutesFromElements(
                 <Route path="/" element={<Main/>}>
-                  <Route index element={<IndexPage/>}/>
+                <Route index element={<IndexPage/>}/>
                 </Route>
                )
 )
