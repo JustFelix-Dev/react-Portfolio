@@ -8,9 +8,9 @@ const Footer = () => {
               <div>
                 <h3>Connect With Me : </h3>
                 <div className="icons">
-                  <span><BsLinkedin/></span>
-                  <span><AiFillTwitterCircle/></span>
-                  <span><BsGithub/></span>
+                <a target='blank'className='linkedin' href="https://www.linkedin.com/in/justfelixowolabi/"><span><BsLinkedin/></span></a>    
+                 <a className='twitter' target='blank' href="https://twitter.com/justfelix_dev"><span><AiFillTwitterCircle/></span></a> 
+                <a className='github' target='blank' href="https://github.com/JustFelix-Dev"><span><BsGithub/></span></a>  
                 </div>
                 <div className="phoneNumber">
                     <span>|<BsTelephoneFill/> : (+234)-8146225497</span>

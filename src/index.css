@@ -391,3 +391,39 @@ li a.active{
     opacity: 0;
   }
 }
+
+/* Footer */
+footer{
+  background-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.9);
+  margin-top: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+footer div{
+  display: flex;
+  align-items: center;
+}
+footer  .icons a{
+  color: black;
+  cursor: pointer;
+  user-select: none;
+}
+footer .icons :is(.linkedin,.twitter,.github){
+  font-size:1.1rem;
+  transition: all 200ms ease-in-out;
+}
+footer .icons :is(.linkedin,.twitter,.github):hover{
+   scale:1.1;
+}
+footer  .icons a span{
+  display: flex;
+  align-items: center;
+}
+
+footer .phoneNumber span{
+  display: flex;
+  gap: .4rem;
+  align-items: center;
+}
