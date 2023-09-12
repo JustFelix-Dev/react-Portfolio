@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Mukta', sans-serif;
+  user-select: none;
 }
 
 body{
@@ -27,6 +28,7 @@ nav{
   display: flex;
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 5rem;
   border-radius: 20px;
   align-items: center;
   justify-content: space-between;

@@ -7,7 +7,6 @@ const Hero = () => {
     return ( 
          <>
            <div className="hero">
-            <Nav/>
         <div className="hero__content">
             <div className="first">
                 <div className="border">

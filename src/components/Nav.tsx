@@ -13,9 +13,9 @@ const Nav = () => {
             </NavLink>
             <div className="nav__items">
                 <ul>
-                 <li><NavLink to='/'>Home</NavLink></li> 
-                 <li><NavLink to='/about'>About</NavLink></li> 
-                 <li><NavLink to='/resume'>Resume</NavLink></li> 
+                 <li><a href="#">Home</a></li> 
+                 <li><a href="#">About</a></li> 
+                 <li><a href="#">Resume</a></li> 
                  <li><Link className='contact' activeClass="active" to="contact" spy={true} smooth={true} offset={100} duration={2000}>Contact Me</Link>
                  </li>
                 </ul>
