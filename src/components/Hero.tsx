@@ -8,7 +8,7 @@ const Hero = () => {
          <>
            <div className="hero">
         <div className="hero__content">
-            <div className="first">
+            <div className="firstparent">
                 <div className="border">
                     <div></div>
                 </div>
@@ -24,11 +24,9 @@ const Hero = () => {
                 </motion.button>
                 </Link>
             </div>
-            <div className="second">
+            <div className="secondparent">
                 <motion.div initial={{opacity:0,y:60}} animate={{opacity:1,y:0}} transition={{duration:4,delay:1}} className="myImage"></motion.div>
-            </div>
-        </div>
-          <div className="myIcons">
+                <div className="myIcons">
             <motion.div initial={{opacity:0,scale:0.2}} animate={{opacity:1,scale:1.1}} transition={{type:'spring',stiffness:110,delay:1,duration:7, repeat: Infinity , repeatType:'mirror',repeatDelay:7}} className="first"> <img src="/tailwind.png" alt="icon" height={30} width={30} style={{borderRadius:"50px"}} /></motion.div>
             <motion.div initial={{opacity:0,scale:0.2}} animate={{opacity:1,scale:1.1}} transition={{type:'spring',stiffness:110,delay:1.5,duration:7,repeat: Infinity , repeatType:'mirror',repeatDelay:7}} className="second"> <img src="/typescript.png" alt="icon"  height={30} width={30} style={{borderRadius:"50px"}}  /></motion.div>
             <motion.div initial={{opacity:0,scale:0.2}} animate={{opacity:1,scale:1.1}} transition={{type:'spring',stiffness:110,delay:2,duration:7,repeat: Infinity , repeatType:'mirror',repeatDelay:7}} className="third"> <img src="/react.png" alt="icon"  height={30} width={30} style={{borderRadius:"50px"}}  /></motion.div>
@@ -36,6 +34,9 @@ const Hero = () => {
             <motion.div initial={{opacity:0,scale:0.2}} animate={{opacity:1,scale:1.1}} transition={{type:'spring',stiffness:110,delay:3,duration:7,repeat: Infinity , repeatType:'mirror',repeatDelay:7}} className="fifth"> <img src="/nodejs.png" alt="icon"  height={30} width={30} style={{borderRadius:"50px"}}  /></motion.div>
             <motion.div initial={{opacity:0,scale:0.2}} animate={{opacity:1,scale:1.1}} transition={{type:'spring',stiffness:110,delay:3.5,duration:7,repeat: Infinity , repeatType:'mirror',repeatDelay:7}} className="sixth"> <img src="/javascript.png" alt="icon"  height={30} width={30} style={{borderRadius:"50px"}}  /></motion.div>
           </div>
+            </div>
+        </div>
+        
      </div>
          </>
      );

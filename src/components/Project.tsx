@@ -9,7 +9,7 @@ const Project = () => {
    if(!routeContext){
       return null;
    }
-   const { handlePageType} = routeContext;
+   const { handlePageType } = routeContext;
     return ( 
             <>
              <div className="projects">

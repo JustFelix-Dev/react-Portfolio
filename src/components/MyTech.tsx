@@ -34,7 +34,6 @@ const MyTech = () => {
              <div className="introduction">
                 <motion.h2 initial={{opacity:0,y:100}} animate={{opacity:1,y:0}} transition={{duration:1}}>OVERVIEW.</motion.h2>
                   <motion.p initial={{opacity:0,y:100}} animate={{opacity:1,y:0}} transition={{duration:1}}> I help clients,firms or organizations build applications or solve their software engineering problems by deploying/combining the use of required technology stacks needed for such projects.
-                  Let's build something extraordinary together and leave a lasting   impression on your users. Reach out to me and let's get started!
                   </motion.p>
                   <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} transition={{type:'spring', delay:0.6,duration:2.5,staggerChildren:1}}className="intro__cards">
                     <Tilt className='tilted' options={{ max: 45, scale: 1,speed:450 }}>

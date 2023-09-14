@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
 import {NavLink} from 'react-router-dom';
 import { Link } from 'react-scroll';
 import { RouteContext } from '../pages/context/routeContext';
@@ -7,9 +7,17 @@ import { RouteContext } from '../pages/context/routeContext';
 
 const Nav = () => {
     const routeContext = useContext(RouteContext);
+    const menuRef = useRef<HTMLDivElement>(null);
+    const navRef = useRef<HTMLDivElement>(null);
+
 
     if(!routeContext){
         return null;
+    }
+
+    const handleMenu = ()=>{
+        menuRef.current?.classList.toggle('change')
+        navRef.current?.classList.toggle('showMenu')
     }
 
     const {handlePageType} = routeContext;
@@ -21,7 +29,12 @@ const Nav = () => {
           <motion.path initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:7,repeat:Infinity,repeatType:'mirror',ease:'easeInOut'}}  stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"></motion.path>
          </svg></motion.span>
             </NavLink>
-            <div className="nav__items">
+            <div ref={menuRef} className="container menu" onClick={handleMenu}>
+                <div className="bar1"></div>
+                <div className="bar2"></div>
+                <div className="bar3"></div>
+                </div>
+            <div ref={navRef} className="nav__items">
                 <ul>
                  <li onClick={()=>handlePageType('home')} ><a >Home</a></li> 
                  <li onClick={()=>handlePageType('about')} ><a >About</a></li> 
