@@ -1,9 +1,9 @@
 import { Link } from "react-scroll";
-import Nav from "./Nav";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 
 const Hero = () => {
+    
     return ( 
          <>
            <div className="hero">
@@ -25,12 +25,18 @@ const Hero = () => {
                 </Link>
             </div>
             <div className="second">
-            <svg  width={300} height={300} fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <motion.path initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:7,repeat:Infinity,repeatType:'mirror',ease:'easeInOut'}}  stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"></motion.path>
-         </svg>
+                <motion.div initial={{opacity:0,y:60}} animate={{opacity:1,y:0}} transition={{duration:4,delay:1}} className="myImage"></motion.div>
             </div>
         </div>
-             </div>
+          <div className="myIcons">
+            <motion.div initial={{opacity:0,scale:0.2}} animate={{opacity:1,scale:1.1}} transition={{type:'spring',stiffness:110,delay:1,duration:7, repeat: Infinity , repeatType:'mirror',repeatDelay:7}} className="first"> <img src="/tailwind.png" alt="icon" height={30} width={30} style={{borderRadius:"50px"}} /></motion.div>
+            <motion.div initial={{opacity:0,scale:0.2}} animate={{opacity:1,scale:1.1}} transition={{type:'spring',stiffness:110,delay:1.5,duration:7,repeat: Infinity , repeatType:'mirror',repeatDelay:7}} className="second"> <img src="/typescript.png" alt="icon"  height={30} width={30} style={{borderRadius:"50px"}}  /></motion.div>
+            <motion.div initial={{opacity:0,scale:0.2}} animate={{opacity:1,scale:1.1}} transition={{type:'spring',stiffness:110,delay:2,duration:7,repeat: Infinity , repeatType:'mirror',repeatDelay:7}} className="third"> <img src="/react.png" alt="icon"  height={30} width={30} style={{borderRadius:"50px"}}  /></motion.div>
+            <motion.div initial={{opacity:0,scale:0.2}} animate={{opacity:1,scale:1.1}} transition={{type:'spring',stiffness:110,delay:2.5,duration:7,repeat: Infinity , repeatType:'mirror',repeatDelay:7}} className="fourth"> <img src="/git.png" alt="icon" height={30} width={30}style={{borderRadius:"50px"}}  /></motion.div>
+            <motion.div initial={{opacity:0,scale:0.2}} animate={{opacity:1,scale:1.1}} transition={{type:'spring',stiffness:110,delay:3,duration:7,repeat: Infinity , repeatType:'mirror',repeatDelay:7}} className="fifth"> <img src="/nodejs.png" alt="icon"  height={30} width={30} style={{borderRadius:"50px"}}  /></motion.div>
+            <motion.div initial={{opacity:0,scale:0.2}} animate={{opacity:1,scale:1.1}} transition={{type:'spring',stiffness:110,delay:3.5,duration:7,repeat: Infinity , repeatType:'mirror',repeatDelay:7}} className="sixth"> <img src="/javascript.png" alt="icon"  height={30} width={30} style={{borderRadius:"50px"}}  /></motion.div>
+          </div>
+     </div>
          </>
      );
 }

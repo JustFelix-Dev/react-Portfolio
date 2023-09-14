@@ -54,7 +54,7 @@ const Contact = () => {
     return ( 
           <>
             <div id='contact' className="container">
-            <Tilt className="myForm" options={{ max: 45, scale: 1,speed:450 }}>
+            <div className="myForm" >
                 <span>Get In Touch</span>
                  <h1>Contact.</h1>
                  <form 
@@ -85,7 +85,7 @@ const Contact = () => {
                                         </div>) : 'Send'}
                     </button>
                  </form>
-            </Tilt>
+            </div>
               <div className="contact__image">
               <svg  xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 36 36" id="message">
               <g transform="translate(0 -1016.362)">

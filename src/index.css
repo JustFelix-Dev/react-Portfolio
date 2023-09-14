@@ -6,12 +6,19 @@
   user-select: none;
 }
 
+html {
+  --cursor-color: rgb(192, 186, 186);
+}
+
+html.dark-mode {
+  --cursor-color: #fff
+}
+
+img{
+  max-width: 100%;
+}
 body{
-  background-image:url('/twilight.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment:fixed;
-  background-position: bottom;
+  background-color: #222;
 }
 
 ::-webkit-scrollbar{
@@ -19,7 +26,7 @@ body{
   background-color: rgb(151, 145, 145);
 }
 ::-webkit-scrollbar-thumb{
-  background-color:#562424;
+  background-color:lightyellow;
   border-radius: 50px;
 }
 /* NAV */
@@ -43,31 +50,32 @@ a{
   color: white;
   text-decoration: none;
   padding: .1rem .7rem;
+  transition: all ease-in-out 500ms;
 }
-li a.active{
-  background-color: #562424;
+li a:hover{
+  background-color: lightyellow;
   border-radius:10px;
-  color: white;
+  color: black;
 }
 .contact {
-  background-image: linear-gradient(to right, brown 10%, #562424  41%, black 100%);
+  background-image: linear-gradient(to right, lightyellow 10%, gold 41%, lightyellow 100%);
   background-size: 400%;
   border-radius:10px;
-  color: white;
+  color: black;
   animation: glowing 2500ms infinite;
   cursor: pointer;
 }
 @keyframes glowing {
   0% {
-    box-shadow: 0 0 20px #562424;
+    box-shadow: 0 0 5px lightyellow;
     background-position: left;
   }
   50% {
-    box-shadow: 0 0 40px #562424;
+    box-shadow: 0 0 10px lightyellow;
     background-position: center;
   }
   100% {
-    box-shadow: 0 0 20px #562424;
+    box-shadow: 0 0 15px lightyellow;
     background-position: right;
   }
 }
@@ -116,12 +124,16 @@ li a.active{
   gap: 5rem;
   padding-bottom: 5rem;
   height: 550px;
+  /* border: 3px solid red; */
+ position: relative;
 }
 
 .hero__content{
   display: flex;
   justify-content: center;
   gap: 1rem;
+  align-items: center;
+
 }
 .hero__content .first{
   flex: 0 0 50%;
@@ -142,6 +154,8 @@ li a.active{
   display: flex;
   flex: 0 0 30%;
   justify-content: end;
+  align-items: center;
+  align-self: center;
 }
 .hero .hero__content div{
   color: white;
@@ -214,10 +228,53 @@ li a.active{
   transform: translate(2px ,2px);
 }
 
+.hero__content .second .myImage{
+  background-image: url('/Felix.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  border: 7px solid lightyellow;
+  width: 300px;
+  height: 300px;
+}
+
+
+
+.hero .myIcons > div {
+  position: absolute;
+}
+
+.hero .myIcons .first {
+  top: 50px;
+  right: 500px;
+}
+.hero .myIcons .second {
+  top: 50px;
+  right: 160px;
+}
+.hero .myIcons .third {
+  bottom: 200px;
+    right: 500px;
+}
+.hero .myIcons .fourth {
+  top: -30px;
+  right: 320px;
+}
+
+.hero .myIcons .fifth {
+  bottom: 200px;
+  right: 160px;
+}
+.hero .myIcons .sixth {
+  bottom: 130px;
+   right: 320px;
+}
+
 /* INTRODUCTION */
 .introduction{
   color: white;
-  padding: 1rem 4rem;
+  padding: 0 4rem;
+  font-size: 1.2rem;
 }
 
 .introduction p {
@@ -236,8 +293,8 @@ li a.active{
    padding-block: 3rem;
    align-items: center;
    background-color: rgba(255, 255, 255, 0.1);
-   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid brown;
+   box-shadow: 0 2px 60px rgba(0, 0, 0, 0.1);
+    border: 2px solid lightyellow;
     border-radius: 20px;
     height: 16rem;
     width: 14rem;
@@ -254,6 +311,7 @@ li a.active{
 .technology{
   padding: 0 4rem;
   color: white;
+  font-size: 1.2rem;
 }
 .tech__stack {
   display: flex;
@@ -266,7 +324,7 @@ li a.active{
 }
 .tech__stack > div {
    margin-block: 1.5rem;
-   border: 2px solid brown;
+   border: 2px solid lightyellow;
 }
 .tech__stack :is(.frontEnd,.backEnd,.devOps){
   flex: 0 0 25%;
@@ -311,10 +369,171 @@ li a.active{
  .projects{
   color: white;
   padding: 1rem 4rem;
+  font-size: 1.2rem;
  }
  .projects p {
     max-width: 75ch;
  }
+ .projects .projectData {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+ }
+ .projectData :is(.first,.second,.third){
+  cursor: pointer;
+  text-align: center;
+  flex: 0 0 30%;
+  padding-top: 1rem;
+  margin-block: 2rem;
+  background-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  transition: all ease-in-out 300ms;
+  position: relative;
+ }
+ .projectData :is(.first,.second,.third) .details{
+     padding-bottom: 1rem;
+ }
+ .projectData :is(.first,.second,.third) .link{
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+
+ }
+ .projectData :is(.first,.second,.third):hover{
+  transform: scale(0.95);
+ }
+
+ .projectData :is(.first,.second,.third) .github{
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  background-color: rgb(139, 69, 19,0.6);
+  padding: .6rem;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  transition: all ease-in-out 300ms;
+
+ }
+ .projectData :is(.first,.second,.third) .github:hover{
+    transform: scale(1.05);
+ }
+
+ /* Project Button */
+ .project__button{
+  display: flex;
+  justify-content: center;
+  margin-block: 2rem;
+ }
+ .scene {
+  width: 10em;
+  justify-content: center;
+  align-items: center;
+ }
+ 
+ .cube {
+  color: #ccc;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.85s cubic-bezier(.17,.67,.14,.93);
+  transform-style: preserve-3d;
+  transform-origin: 100% 50%;
+  width: 10em;
+  height: 4em;
+ }
+ 
+ .cube:hover {
+  transform: rotateX(-90deg);
+ }
+ 
+ .side {
+  box-sizing: border-box;
+  position: absolute;
+  display: inline-block;
+  height: 4em;
+  width: 10em;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 1.5em;
+  font-weight: bold;
+ }
+ 
+ .top {
+  background: wheat;
+  color: #222;
+  transform: rotateX(90deg) translate3d(0, 0, 2em);
+  box-shadow: inset 0 0 0 5px #fff;
+ }
+ 
+ .front {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  box-shadow: inset 0 0 0 5px #fff;
+  transform: translate3d(0, 0, 2em);
+ }
+
+ /* ALL-PROJECT */
+  .allProject{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-inline: 5rem;
+    
+  }
+  .allProject > div{
+    color: white;
+    flex: 0 0 30%;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+    flex: 0 0 30%;
+    padding-top: 1rem;
+    margin-block: 2rem;
+    background-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    transition: all ease-in-out 300ms;
+    position: relative;
+  }
+  .allProject > div:hover{
+    transform: scale(0.95);
+  }
+  .allProject > div .link{
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+  
+   }
+   .allProject > div .github{
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    background-color: rgb(139, 69, 19,0.6);
+    padding: .6rem;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    transition: all ease-in-out 300ms;
+   }
+
+   /* About */
+   .about__container{
+      margin-inline: 7rem;
+      margin-bottom: 3rem;
+   }
+   .about{
+    background-color: lightyellow;
+    border-radius: 20px;
+    padding: 2rem 2rem;
+   }
+   .about p {
+    margin-block: 1rem;
+    font-size: 1rem;
+   }
+
  /* CONTACTS */
  .contacts{
   color: white;
