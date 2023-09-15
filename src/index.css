@@ -752,8 +752,8 @@ footer .phoneNumber span{
     display: block;
   }
   .nav__items{
-    transition: all ease-in-out 300ms;
-    transform:translateY(-100px);
+    transition: all ease-in-out 550ms;
+    transform:translateX(-100px);
     opacity: 0;
     position: fixed;
     top: 90px;
@@ -770,7 +770,7 @@ footer .phoneNumber span{
   }
   .nav__items.showMenu{
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
   .nav__items ul {
     flex-direction: column;
@@ -830,9 +830,19 @@ footer .phoneNumber span{
   .projectData :is(.first,.second,.third){
     margin-block: 0;
   }
+  .myForm form input,textarea{
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (max-width:525px){
+  .bar1, .bar2, .bar3{
+    width: 20px;
+    height: 2px;
+  }
+  .logo__title{
+    font-size: 1rem;
+  }
   .hero__content{
     justify-content: start;
     align-items: start;
