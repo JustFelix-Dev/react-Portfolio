@@ -36,6 +36,7 @@ const Nav = () => {
                 </div>
             <div ref={navRef} className="nav__items">
                 <ul>
+                <div  onClick={handleMenu} className='cancel__img'><img src="/cancel.png" alt="icon" height={20} width={20} /></div>
                  <li onClick={()=>handlePageType('home')} ><a >Home</a></li> 
                  <li onClick={()=>handlePageType('about')} ><a >About</a></li> 
                  <li><a href="#">Resume</a></li>

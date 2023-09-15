@@ -114,7 +114,9 @@ li a:hover{
   display: flex;
   align-items: end;
   list-style:none;
-
+}
+.nav__items .cancel__img{
+  display: none;
 }
 .nav__items ul li {
   padding: .8rem;
@@ -759,6 +761,12 @@ footer .phoneNumber span{
     background-color: #222;
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.9);
     z-index: 1;
+  }
+  .nav__items .cancel__img{
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 20px;
   }
   .nav__items.showMenu{
     opacity: 1;
