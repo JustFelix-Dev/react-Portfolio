@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: 'Mukta', sans-serif;
   user-select: none;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  image-rendering: smooth;
 }
 
 html {
@@ -148,7 +151,6 @@ li a:hover{
   gap: 5rem;
   padding-bottom: 3rem;
   height: 550px;
-  border: 3px solid red;
 }
 
 .hero__content{
@@ -156,12 +158,10 @@ li a:hover{
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  border: 2px solid green;
 }
 .hero__content .firstparent{
   width: 50%;
   max-width: 60ch;
-  border: 2px solid red;
 }
 .hero__content .firstparent .fullstack{
   font-weight: bold ;
@@ -180,7 +180,6 @@ li a:hover{
   justify-content: end;
   align-items: center;
   align-self: center;
-  border: 2px solid black;
  position: relative;
 
 }
@@ -228,7 +227,7 @@ li a:hover{
   width: 0%;
   opacity: 0;
   color: black;
-  font-size: 1.2em;
+  font-size: 1.1rem;
   transition-duration: .3s;
 }
 /* hover effect on button width */
@@ -302,7 +301,6 @@ li a:hover{
   color: white;
   padding: 0 4rem;
   font-size: 1.2rem;
-  border: 2px dashed yellow;
 }
 
 .introduction p {
@@ -348,7 +346,6 @@ li a:hover{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   gap: 3rem;
-  /* border: 1px solid red; */
 }
 .tech__stack > div {
    margin-block: 1.5rem;
@@ -380,7 +377,6 @@ li a:hover{
    display: flex;
    justify-content: center;
    flex-wrap: wrap;
-   /* border: 1px solid red; */
    height: 9rem;
    gap: 1rem;
  }
@@ -437,7 +433,7 @@ li a:hover{
   position: absolute;
   top: 25px;
   left: 15px;
-  background-color: rgb(139, 69, 19,0.6);
+  background-color:rgb(196, 196, 188);
   padding: .6rem;
   display: flex;
   align-items: center;
@@ -514,6 +510,7 @@ li a:hover{
   .allProject > div{
     color: white;
     flex: 0 0 30%;
+    min-width: 290px;
     padding: 1rem;
     cursor: pointer;
     text-align: center;
@@ -539,7 +536,7 @@ li a:hover{
     position: absolute;
     top: 25px;
     left: 40px;
-    background-color: rgb(139, 69, 19,0.6);
+    background-color: rgb(196, 196, 188);
     padding: .6rem;
     display: flex;
     align-items: center;
@@ -566,12 +563,10 @@ li a:hover{
  .contacts{
   color: white;
   padding: 1rem 8rem;
-  border: 2px solid red;
  }
  .contacts .container{
   display: flex;
   gap: 4rem;
-  border: 2px solid black;
  }
  .contacts .myForm {
   flex: 0 0 50%;
@@ -579,7 +574,6 @@ li a:hover{
   background-color: rgba(255, 255, 255, 0.12);
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.9);
   border-radius: 10px;
-  border: 2px solid orange;
  }
  .myForm span {
   font-size: 1.3rem;
@@ -631,7 +625,6 @@ li a:hover{
   display: flex;
   align-self: center;
   justify-content: end;
-  border: 2px solid;
   width: 300px;
   height: 300px;
  }
@@ -705,6 +698,12 @@ footer .phoneNumber span{
   .contacts{
     padding: 1rem 2rem;
   }
+  .allProject{
+    margin-inline: 1rem;
+  }
+  .allProject > div {
+    margin-block: 0;
+  }
 }
 
 @media screen and (max-width:975px){
@@ -717,6 +716,14 @@ footer .phoneNumber span{
   }
   .hero__content .firstparent{
     min-width:350px ;
+    padding-left: 2rem;
+  }
+  .hero__content .firstparent .Btn{
+    width: 30px;
+    height: 30px;
+  }
+  .hero__content .firstparent .Btn .text{
+    font-size: 0.9rem;
   }
 }
 
@@ -730,7 +737,7 @@ footer .phoneNumber span{
 @media screen and (max-width:820px) {
   .contacts .myForm{
     flex: 0 0 70%;
-    min-width: 350px;
+    min-width: 300px;
     padding-right: 0;
   }
   .container .contact__image{
@@ -762,6 +769,9 @@ footer .phoneNumber span{
     align-items: center;
     padding: 1rem 3rem;
   }
+  .about__container{
+    margin-inline: 1rem;
+  }
 
 }
 
@@ -777,6 +787,12 @@ footer .phoneNumber span{
   }
   .contacts{
     font-size: .8rem;
+  }
+  .myForm form input::placeholder,textarea::placeholder{
+    font-size: .8rem;
+  }
+  .myForm :is(span,h1){
+    font-size: 1rem;
   }
 
 }
@@ -815,7 +831,6 @@ footer .phoneNumber span{
   }
   .hero__content .secondparent{
     align-self: start;
-    /* justify-content: start; */
   }
   .hero__content .secondparent{
     width: 200px;
@@ -825,7 +840,6 @@ footer .phoneNumber span{
     width: 150px;
     height: 150px;
   }
-
   .hero .myIcons .first {
     top: 10px;
     right: -50px;
@@ -854,6 +868,9 @@ footer .phoneNumber span{
   .hero .myIcons .sixth {
     bottom: -50px;
      left: 100px;
+  }
+  footer div h3{
+    display: none;
   }
   
 }

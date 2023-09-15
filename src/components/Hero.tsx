@@ -18,7 +18,7 @@ const Hero = () => {
                 </motion.h1>
                    
                 <Link className="buttons" activeClass="active" to="contact" spy={true} smooth={true} offset={100} duration={2000}>
-                <motion.button initial={{opacity:0,scale:0.6}} animate={{opacity:1,scale:[0.6,1.4]}} transition={{type:'spring',stiffness:10,repeat:Infinity,duration:0.8,repeatType:'reverse',delay:6}} className="Btn">
+                <motion.button initial={{opacity:0,scale:0.6}} animate={{opacity:1,scale:[0.6,1]}} transition={{type:'spring',stiffness:10,repeat:Infinity,duration:0.8,repeatType:'reverse',delay:6}} className="Btn">
                 <div className="sign"><img style={{fontWeight:900}} src="/public/contact.svg" alt="contact-icon" height={20} width={20} /></div>
                 <div className="text">&nbsp;&nbsp;Contact&nbsp;Me</div>
                 </motion.button>
@@ -36,7 +36,6 @@ const Hero = () => {
           </div>
             </div>
         </div>
-        
      </div>
          </>
      );
