@@ -1,6 +1,5 @@
 import emailjs  from "@emailjs/browser";
 import { useRef, useState } from "react";
-import { Tilt } from "react-tilt";
 
 const Contact = () => {
     const formRef = useRef<HTMLFormElement>(null);
