@@ -512,7 +512,7 @@ li a:hover{
   .allProject > div{
     color: white;
     flex: 0 0 30%;
-    min-width: 290px;
+    min-width: 320px;
     padding: 1rem;
     cursor: pointer;
     text-align: center;
