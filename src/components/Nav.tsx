@@ -39,7 +39,7 @@ const Nav = () => {
                 <div  onClick={handleMenu} className='cancel__img'><img src="/cancel.png" alt="icon" height={20} width={20} /></div>
                  <li onClick={()=>handlePageType('home')} ><a >Home</a></li> 
                  <li onClick={()=>handlePageType('about')} ><a >About</a></li> 
-                 <li><a href="#">Resume</a></li>
+                 <li><a href="https://drive.google.com/file/d/1eZErtoeKKUqufwSQwX_VabmrVlX6rD03/view?usp=drive_link" download='Felix Resume.pdf' >Resume</a></li>
                  <li><Link className='contact' activeClass="active" to="contact" spy={true} smooth={true} offset={100} duration={2000}>Contact Me</Link>
                  </li>
                 </ul>
