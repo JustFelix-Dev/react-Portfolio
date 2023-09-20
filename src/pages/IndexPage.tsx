@@ -6,16 +6,18 @@ import Hero from "../components/Hero";
 import MyTech from "../components/MyTech";
 import Project from "../components/Project";
 import { RouteContext } from "./context/routeContext";
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 
 const IndexPage = () => {
+
    const routeContext = useContext(RouteContext);
    if(!routeContext){
       return null;
    }
    const { pageType } = routeContext;
 
-   console.log("PageType:", pageType)
+   useEffect(()=>{ window.scrollTo(0,0)},[pageType])
+   
 
     return ( 
       <>
@@ -41,9 +43,6 @@ const IndexPage = () => {
                </div>
             )
                }
-              
-                 
-              
              <Footer/>
       </>
      );
