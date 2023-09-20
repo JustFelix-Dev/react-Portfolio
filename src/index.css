@@ -637,7 +637,7 @@ li a:hover{
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: lightyellow;
+  background:#333;
   animation: load-pulse 0.85s infinite linear;
 }
 
