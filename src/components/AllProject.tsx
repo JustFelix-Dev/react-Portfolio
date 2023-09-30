@@ -36,7 +36,7 @@ const AllProject = () => {
                      <img src="https://res.cloudinary.com/dljgkzwfz/image/upload/v1694427320/Github%20ReadMe%20Screenshots/Screenshot_73_hdcphh.png" alt="icon" />
                   </a>
                      <p className="details">
-                     Your All-in-One Booking & Weather Companion with Real-Time Chat Application
+                      Booking & Weather Companion with Real-Time Chat Application
                           
                      </p>
             </motion.div>

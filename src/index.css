@@ -420,6 +420,7 @@ li a:hover{
  }
  .projectData :is(.first,.second,.third) .details{
      padding-bottom: 1rem;
+     font-size: 1rem;
  }
  .projectData :is(.first,.second,.third) .link{
   display: block;
