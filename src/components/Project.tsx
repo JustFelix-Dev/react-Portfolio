@@ -18,11 +18,11 @@ const Project = () => {
                 <div className="projectData">
                   <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.6,duration:1}}  className="first">
                   <a target="blank" className="github" href="https://github.com/JustFelix-Dev/mern-airBnB-app"><img src="/github.png" alt="icon" height={20} width={20} /></a>
-                  <a className="link" target="blank" href={'https://airbnb.felixdev.com.ng'}>
+                  <a className="link" target="blank" href={'https://www.airbnb.felixdev.com.ng'}>
                      <img src="https://res.cloudinary.com/dljgkzwfz/image/upload/v1694427320/Github%20ReadMe%20Screenshots/Screenshot_73_hdcphh.png" alt="icon" />
                   </a>
                      <p className="details">
-                          Booking Application
+                     Your All-in-One Booking & Weather Companion with Real-Time Chat Application
                      </p>
                   </motion.div>
                   <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.6,duration:1}} className="second">
@@ -31,7 +31,7 @@ const Project = () => {
                      <img src="https://res.cloudinary.com/dljgkzwfz/image/upload/v1694437857/Github%20ReadMe%20Screenshots/Screenshot_77_jff20f.png" alt="icon" />
                   </a>
                      <p className="details">
-                          Budgetry
+                     Personal Budgeting and Expense Management Tracker
                      </p>
                   </motion.div>
                   <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.6,duration:1}} className="third">
@@ -40,7 +40,7 @@ const Project = () => {
                      <img src="https://res.cloudinary.com/dljgkzwfz/image/upload/v1694432699/Github%20ReadMe%20Screenshots/Screenshot_74_uapnm0.png" alt="icon" />
                   </a>
                      <p className="details">
-                          Scheduley
+                     Full-Stack To-Do Manager with Smart Filters
                      </p>
                   </motion.div>
                 </div>

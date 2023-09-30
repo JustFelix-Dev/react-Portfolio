@@ -36,7 +36,8 @@ const AllProject = () => {
                      <img src="https://res.cloudinary.com/dljgkzwfz/image/upload/v1694427320/Github%20ReadMe%20Screenshots/Screenshot_73_hdcphh.png" alt="icon" />
                   </a>
                      <p className="details">
-                          Booking Application
+                     Your All-in-One Booking & Weather Companion with Real-Time Chat Application
+                          
                      </p>
             </motion.div>
             <motion.div  variants={childVariant}  >
@@ -45,7 +46,8 @@ const AllProject = () => {
                      <img src="https://res.cloudinary.com/dljgkzwfz/image/upload/v1694437857/Github%20ReadMe%20Screenshots/Screenshot_77_jff20f.png" alt="icon" />
                   </a>
                      <p className="details">
-                          Budgetry
+                     Personal Budgeting and Expense Management Tracker
+                          
                      </p>
             </motion.div>
             <motion.div  variants={childVariant} >
@@ -54,7 +56,7 @@ const AllProject = () => {
                      <img src="https://res.cloudinary.com/dljgkzwfz/image/upload/v1694432699/Github%20ReadMe%20Screenshots/Screenshot_74_uapnm0.png" alt="icon" />
                   </a>
                      <p className="details">
-                          Scheduley
+                     Full-Stack To-Do Manager with Smart Filters
                      </p>
             </motion.div>
             <motion.div  variants={childVariant} >
@@ -81,7 +83,7 @@ const AllProject = () => {
                      <img src="https://res.cloudinary.com/dljgkzwfz/image/upload/v1694437109/Github%20ReadMe%20Screenshots/Screenshot_76_bqovtd.png" alt="icon" />
                   </a>
                      <p className="details">
-                         FelixCSS - CSS Library
+                         FelixCSS - Custom CSS Library
                      </p>
             </motion.div>
             <motion.div  variants={childVariant}  >
@@ -108,7 +110,7 @@ const AllProject = () => {
                      <img src="https://res.cloudinary.com/dljgkzwfz/image/upload/v1694443247/Github%20ReadMe%20Screenshots/Screenshot_84_nbxpx7.png" alt="icon" />
                   </a>
                      <p className="details">
-                          Weather Application
+                     Forecast and Weather Companion
                      </p>
             </motion.div>
             <motion.div  variants={childVariant}  >
@@ -171,7 +173,7 @@ const AllProject = () => {
                      <img src="https://res.cloudinary.com/dljgkzwfz/image/upload/v1694495398/Github%20ReadMe%20Screenshots/Screenshot_89_tybuki.png" alt="icon" />
                   </a>
                      <p className="details">
-                          JS - Calculator
+                     Simple and Efficient Calculator
                      </p>
             </motion.div>
             <motion.div  variants={childVariant} >
@@ -180,7 +182,7 @@ const AllProject = () => {
                      <img src="https://res.cloudinary.com/dljgkzwfz/image/upload/v1694513591/Github%20ReadMe%20Screenshots/Screenshot_97_mfzntq.png" alt="icon" />
                   </a>
                      <p className="details">
-                          Coffee Enterprise
+                          Coffee Enterprise Page
                      </p>
             </motion.div>
             <motion.div  variants={childVariant}  >
